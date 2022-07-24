@@ -1,0 +1,22 @@
+<div id="<%= dom_id arquivos_externo %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Nome:</strong>
+    <%= arquivos_externo.nome %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Arquivo:</strong>
+    <%= link_to arquivos_externo.arquivo.filename, arquivos_externo.arquivo if arquivos_externo.arquivo.attached? %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Status:</strong>
+    <%= arquivos_externo.status %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this arquivos externo", arquivos_externo, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this arquivos externo', edit_relatorios_arquivos_externo_path(arquivos_externo), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

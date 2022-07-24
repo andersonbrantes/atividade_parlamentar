@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_23_180109) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_24_160137) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -37,6 +37,33 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_23_180109) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "politico_legislaturas", force: :cascade do |t|
+    t.string "carteira"
+    t.time "ano_base"
+    t.string "uf"
+    t.string "partido"
+    t.string "codigo_legislatura"
+    t.integer "parlamentar_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["parlamentar_id"], name: "index_politico_legislaturas_on_parlamentar_id"
+  end
+
+  create_table "politico_parlamentars", force: :cascade do |t|
+    t.string "nome"
+    t.string "cpf"
+    t.string "codigo_cd"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "relatorios_arquivos_externos", force: :cascade do |t|
+    t.string "nome"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "report_manager_external_files", force: :cascade do |t|

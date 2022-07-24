@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  carteira: MyString
+  ano_base: 2022-07-24 13:01:37
+  uf: MyString
+  partido: MyString
+  codigo_legislatura: MyString
+  parlamentar_id: 1
+
+two:
+  carteira: MyString
+  ano_base: 2022-07-24 13:01:37
+  uf: MyString
+  partido: MyString
+  codigo_legislatura: MyString
+  parlamentar_id: 1

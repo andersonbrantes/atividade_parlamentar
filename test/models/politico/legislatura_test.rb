@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ReportManager::ExternalFileTest < ActiveSupport::TestCase
+class Politico::LegislaturaTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

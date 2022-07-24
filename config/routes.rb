@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  namespace :report_manager do
-    resources :external_files
+  namespace :relatorios do
+    resources :arquivos_externos
   end
   
-  root 'report_manager/external_files#index'
+  root 'relatorios/arquivos_externos#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
